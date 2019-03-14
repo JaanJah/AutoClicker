@@ -8,5 +8,7 @@ namespace AutoClicker
 {
     public class Clicker
     {
+        public bool ClickerActive { get; set; }
+
     }
 }

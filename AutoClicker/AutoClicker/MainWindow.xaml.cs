@@ -23,6 +23,22 @@ namespace AutoClicker
         public MainWindow()
         {
             InitializeComponent();
+
+            Loaded += MainWindow_Loaded;
+        }
+
+        private void MainWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            //For testing MouseClick
+            this.KeyDown += new KeyEventHandler(MainWindow_KeyDown);
+        }
+
+        public void MainWindow_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.F8)
+            {
+                VirtualMouse.LeftClick();
+            }
         }
 
         private void SettingsBtn_Click(object sender, RoutedEventArgs e)
