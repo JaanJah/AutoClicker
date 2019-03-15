@@ -11,8 +11,8 @@ namespace AutoClicker
     public static class VirtualMouse
     {
         [DllImport("user32.dll")]
-        //static extern void mouse_event(int dwFlags, int dx, int dy, int dwData, int dwExtraInfo);
         static extern void mouse_event(int dwFlags, Point coords);
+
         private const int MOUSEEVENTF_LEFTDOWN = 0x0002;
         private const int MOUSEEVENTF_LEFTUP = 0x0004;
         private const int MOUSEEVENTF_RIGHTDOWN = 0x0008;
