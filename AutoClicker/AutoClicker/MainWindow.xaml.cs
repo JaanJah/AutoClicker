@@ -35,9 +35,11 @@ namespace AutoClicker
 
         public void MainWindow_KeyDown(object sender, KeyEventArgs e)
         {
+            //Testing
             if (e.Key == Key.F8)
             {
                 VirtualMouse.LeftClick();
+                VirtualMouse.MoveTo(100, 100);
             }
         }
 
