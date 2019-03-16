@@ -26,10 +26,19 @@ namespace AutoClicker
 
         private void SaveBtn_Click(object sender, RoutedEventArgs e)
         {
-            //TODO: Saving settings changes logic
+            ChangeConfig();
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
             Close();
         }
+
+        private void ChangeConfig()
+        {
+            Settings settings = new Settings(clickAmount.Text,clickInfinite.IsChecked,clickInterval.Text);
+        }
+
+        private void ClickInfinite_Checked(object sender, RoutedEventArgs e) => clickAmount.IsEnabled = false;
+
+        private void ClickInfinite_Unchecked(object sender, RoutedEventArgs e) => clickAmount.IsEnabled = true;
     }
 }
