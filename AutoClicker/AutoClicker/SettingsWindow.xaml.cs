@@ -34,7 +34,9 @@ namespace AutoClicker
 
         private void ChangeConfig()
         {
-            Settings settings = new Settings(clickAmount.Text,clickInfinite.IsChecked,clickInterval.Text);
+            Settings settings = new Settings();
+            //settings.SaveConfig(clickAmount.Text, clickInfinite.IsChecked, clickInterval.Text);
+            settings.ReadConfig();
         }
 
         private void ClickInfinite_Checked(object sender, RoutedEventArgs e) => clickAmount.IsEnabled = false;
