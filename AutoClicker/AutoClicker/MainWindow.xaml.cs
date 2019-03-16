@@ -31,6 +31,8 @@ namespace AutoClicker
         {
             //For testing MouseClick
             this.KeyDown += new KeyEventHandler(MainWindow_KeyDown);
+
+            //TODO: Get configs here
         }
 
         public void MainWindow_KeyDown(object sender, KeyEventArgs e)
