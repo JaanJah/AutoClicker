@@ -20,6 +20,7 @@ namespace AutoClicker
     /// </summary>
     public partial class MainWindow : Window
     {
+        private int count = 0;
         public MainWindow()
         {
             InitializeComponent();
@@ -35,13 +36,12 @@ namespace AutoClicker
             //TODO: Get configs here
         }
 
-        public void MainWindow_KeyDown(object sender, KeyEventArgs e)
+        private void MainWindow_KeyDown(object sender, KeyEventArgs e)
         {
             //Testing
             if (e.Key == Key.F8)
             {
-                VirtualMouse.LeftClick();
-                VirtualMouse.MoveTo(100, 100);
+                ControlClicker();
             }
         }
 
@@ -50,6 +50,28 @@ namespace AutoClicker
             SettingsWindow settingsWindow = new SettingsWindow();
             settingsWindow.Show();
             Close();
+        }
+
+        private void StartBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ControlClicker();
+        }
+
+        private void ControlClicker()
+        {
+            Clicker clicker = new Clicker();
+            count++;
+            if (count % 2 == 1)
+            {
+                clicker.ClickerActive = true;
+                clicker.StartClicker();
+                StartBtn.Content = "Stop autoclicker";
+            }
+            else if (count % 2 == 0)
+            {
+                clicker.StopClicker();
+                StartBtn.Content = "Start autoclicker";
+            }
         }
     }
 }

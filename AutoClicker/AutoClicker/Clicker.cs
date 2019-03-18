@@ -8,7 +8,23 @@ namespace AutoClicker
 {
     public class Clicker
     {
-        public bool ClickerActive { get; set; }
+        public bool ClickerActive = false;
 
+        public void StartClicker()
+        {
+            if (ClickerActive == true)
+            {
+                //Start clicking
+            }
+            else
+            {
+                return;
+            }
+        }
+
+        public void StopClicker()
+        {
+            ClickerActive = false;
+        }
     }
 }

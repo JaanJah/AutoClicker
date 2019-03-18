@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="300" Width="400">
     <Grid>
-        <Button Name="StartBtn" Content="Start autoclicker" HorizontalAlignment="Left" Height="80" Margin="43,165,0,0" VerticalAlignment="Top" Width="300" FontSize="18"/>
+        <Button Name="StartBtn" Content="Start autoclicker" HorizontalAlignment="Left" Height="80" Margin="43,165,0,0" VerticalAlignment="Top" Width="300" FontSize="18" Click="StartBtn_Click"/>
         <Button Name="SettingsBtn" Content="Settings" HorizontalAlignment="Left" Height="30" Margin="261,10,0,0" VerticalAlignment="Top" Width="100" Click="SettingsBtn_Click" FontSize="16"/>
         <Label Content="Press F8 To Start/Stop autoclicker" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="237" Height="30" FontSize="14"/>
 
