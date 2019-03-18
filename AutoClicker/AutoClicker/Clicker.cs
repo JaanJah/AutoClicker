@@ -12,9 +12,10 @@ namespace AutoClicker
 
         public void StartClicker()
         {
+            ReadConfig();
             if (ClickerActive == true)
             {
-                //Start clicking
+                //TODO: Use config and start clicking
             }
             else
             {
@@ -25,6 +26,11 @@ namespace AutoClicker
         public void StopClicker()
         {
             ClickerActive = false;
+        }
+
+        private void ReadConfig()
+        {
+            //TODO: Read config.txt file here
         }
     }
 }

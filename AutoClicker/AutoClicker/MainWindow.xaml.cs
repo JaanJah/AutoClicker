@@ -30,15 +30,11 @@ namespace AutoClicker
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            //For testing MouseClick
-            this.KeyDown += new KeyEventHandler(MainWindow_KeyDown);
-
-            //TODO: Get configs here
+            KeyDown += new KeyEventHandler(MainWindow_KeyDown);
         }
 
         private void MainWindow_KeyDown(object sender, KeyEventArgs e)
         {
-            //Testing
             if (e.Key == Key.F8)
             {
                 ControlClicker();
