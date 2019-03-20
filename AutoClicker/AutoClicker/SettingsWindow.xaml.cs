@@ -22,6 +22,7 @@ namespace AutoClicker
         public SettingsWindow()
         {
             InitializeComponent();
+            clickInfinite.IsEnabled = false;
         }
 
         private void SaveBtn_Click(object sender, RoutedEventArgs e)
